@@ -7,7 +7,6 @@ end
 
 
 gem 'rails', '~> 5.1.5'
-gem 'sqlite3'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'jquery-rails'
@@ -20,8 +19,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -32,15 +30,14 @@ group :development do
 end
 
 group :test do
-  gem 'minitest', group: :test
-  gem 'minitest-reporters', group: :test
   gem 'rails-controller-testing', '>= 1.0.2'
+  gem 'minitest-reporters'
   gem 'guard',                    '>= 2.13.0'
   gem 'guard-minitest',           '>= 2.4.4'
 end
 
 group :production do
-  gem 'pg', '>= 0.18.4'
+  gem 'pg', '0.18.4'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
